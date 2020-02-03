@@ -7,7 +7,7 @@ const mapStateToProps = (state, props) => {
 };
 
 const mapDispatchToProps = dispatch => ({
-  addToCart: (item, cart) => dispatch(addToCart(item, cart))
+  addToCart: (item) => dispatch(addToCart(item))
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(BookCard);

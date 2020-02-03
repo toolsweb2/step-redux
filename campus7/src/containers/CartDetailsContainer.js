@@ -7,8 +7,8 @@ const mapStateToProps = (state, props) => {
 };
 
 const mapDispatchToProps = dispatch => ({
-  addToCart: (item, cart) => dispatch(addToCart(item, cart)),
-  removeFromCart: (item, cart) => dispatch(removeFromCart(item, cart)),
+  addToCart: (item) => dispatch(addToCart(item)),
+  removeFromCart: (item) => dispatch(removeFromCart(item)),
   emptyCart: () => dispatch(emptyCart())
 
 });

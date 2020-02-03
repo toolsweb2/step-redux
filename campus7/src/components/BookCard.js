@@ -9,7 +9,7 @@ export default function BookCard(props) {
   const data = props.data;
   function handleAddToCart(data) {
     setAnim(!anim);
-    props.addToCart(data, props.cart);
+    props.addToCart(data);
   }
 
   return (

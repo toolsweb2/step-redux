@@ -33,13 +33,13 @@ export default function CartDetails(props) {
               <Table.Cell>
                 <Icon
                   name="minus square outline"
-                  onClick={() => props.removeFromCart(cart[key], cart)}
+                  onClick={() => props.removeFromCart(cart[key])}
                   style={{ cursor: "pointer" }}
                 />
                 {cart[key].quantity}{" "}
                 <Icon
                   name="plus square outline"
-                  onClick={() => props.addToCart(cart[key], cart)}
+                  onClick={() => props.addToCart(cart[key])}
                   style={{ cursor: "pointer" }}
                 />
               </Table.Cell>

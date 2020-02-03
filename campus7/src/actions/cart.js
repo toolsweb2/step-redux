@@ -1,7 +1,10 @@
 import * as types from "../constants";
 
-export const addToCart = (item, cart) => async dispatch => {
+export const addToCart = (item) => async (dispatch, getState) => {
   console.log("item", item);
+  const {cart} = getState().cart;
+  
+
   if (!cart[item.id]) {
     cart[item.id] = item;
     cart[item.id].quantity = 1;
@@ -28,7 +31,9 @@ export const countTotalCart = cart => async dispatch => {
   });
 };
 
-export const removeFromCart = (item, cart) => async dispatch => {
+export const removeFromCart = (item) => async (dispatch, getState)=> {
+  console.log(getState())
+  const {cart} = getState().cart;
   if (cart[item.id].quantity !== 1) {
     cart[item.id].quantity = cart[item.id].quantity - 1;
   } else {
